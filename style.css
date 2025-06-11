@@ -1,0 +1,409 @@
+/* === БАЗОВЫЕ СТИЛИ === */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #F4EFE8;
+  color: #1F1F1F;
+  overflow-x: hidden;
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+a, ul, li {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+  list-style: none;
+  padding: 0;
+}
+
+.display-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+input, textarea {
+  border: none;
+  border-bottom: 1px solid #aaa;
+  background: transparent;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+}
+
+/* === HEADER === */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 50;
+  color: white;
+  width: 100%;
+}
+.nav {
+  display: flex;
+  gap: 2rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+}
+.menu-btn {
+  display: none;
+}
+
+/* === HERO === */
+.hero {
+
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.hero-overlay {
+  background-color: rgba(0,0,0,0.4);
+width: 100vw;
+height: 100vh;
+align-content:center;
+}
+.hero-overlay a{
+  margin-top: 50px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* === КНОПКИ === */
+.btn-light {
+  border: 1px solid white;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  color: white;
+}
+.btn-light:hover {
+  background-color: white;
+  color: black;
+}
+.btn-dark {
+  border: 1px solid black;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  color: black;
+}
+.btn-dark:hover {
+  background-color: black;
+  color: white;
+}
+.small {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* === СЕКЦИИ === */
+.section {
+  padding: 5rem 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 100vh;
+  align-content: center;
+}
+.center {
+  text-align: center;
+}
+
+/* === ГАЛЕРЕЯ === */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+.gallery-left{
+  height: 100vh;
+  width: 50vw;
+}
+
+.gallery-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-right {
+  background-color: #2e2b28;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  height: 100vh;
+  width: 50vw;
+}
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: calc(100% / 3) calc(100% / 3);
+  pointer-events: none;
+}
+.circle-photo {
+  width: 30rem;
+  height: 30rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.circle-photo img {
+  width: 18rem;
+  height: 18rem;
+  object-fit: cover;
+}
+
+/* === МЕНЮ === */
+.menu-section {
+  position: relative;
+  padding: 5rem 1.5rem;
+  background-color: #F4EFE8;
+  color: #1F1F1F;
+  overflow: hidden;
+  text-align: center;
+  width: 100vw;
+  height: 80vh;
+}
+.menu-content {
+  max-width: 800px;
+  margin: 100px auto;
+  position: relative;
+  z-index: 1;
+}
+.menu-photo {
+  width: 350px;
+  height: 550px;
+  overflow: hidden;
+  border-top-left-radius: 170px;
+  border-top-right-radius: 170px;
+  margin: 2rem auto;
+  z-index: 1;
+  position: relative;
+}
+.menu-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.angle-photo {
+  width: 260px;
+
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  position: absolute;
+  bottom: 300px;
+  z-index: 2;
+}
+.angle-photo.left {
+  left: 10%;
+  transform: rotate(-6deg);
+}
+.angle-photo.right {
+  right: 10%;
+  transform: rotate(6deg);
+}
+.background-arc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  background-color: #2e2b28;
+  border-top-left-radius: 100% 100%;
+  border-top-right-radius: 100% 100%;
+  z-index: 0;
+}
+
+/* === КОМАНДА === */
+.team-section {
+  background-color: #2e2b28;
+  color: white;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+}
+
+.team-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.team-content h2{
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.bottom-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #F4EFE8;
+  clip-path: ellipse(100% 100% at 50% 100%);
+}
+
+/* === БРОНИРОВАНИЕ === */
+
+
+.reservation {
+  
+  padding: 1rem 1.5rem;
+  text-align: center;
+  width: 100vw;
+  height: 60vh;
+}
+.reservation-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.reservation-form form {
+  display: grid;
+  gap: 1rem;
+}
+.reservation-form .row {
+  display: flex;
+  gap: 1rem;
+}
+
+/* === ДОБАВЛЕННЫЕ СТИЛИ ДЛЯ РЕЗЕРВАЦИИ === */
+.display-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+}
+
+.reservation-form input,
+.reservation-form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  padding: 0.75rem 0;
+  margin-bottom: 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  background: transparent;
+}
+
+.reservation-form .row {
+  display: flex;
+  gap: 1rem;
+}
+
+.consent-text {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: #444;
+  text-align: left;
+}
+
+.photo-arch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.arched-photo {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 2px solid #e0ddd5;
+  border-radius: 200px 200px 0 0;
+  padding: 0.75rem;
+
+}
+
+.overlay-glass {
+  position: absolute;
+  bottom: -20px;
+  left: 15%;
+  transform: translateX(-50%);
+  width: 160px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+}
+
+/* === FOOTER === */
+.footer {
+  background-color: #2e2b28;
+  padding: 60px 20px 30px;
+  font-family: 'Inter', sans-serif;
+  color: #e0ddd5;
+}
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-brand h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.footer-nav ul,
+.footer-contact p {
+  margin: 8px 0;
+}
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+}
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
