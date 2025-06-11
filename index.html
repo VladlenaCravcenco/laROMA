@@ -12,6 +12,21 @@
   </style>
 </head>
 <body class="bg-[#F4EFE8] text-[#1F1F1F]">
+  <!-- HEADER MENU -->
+  <header class="absolute top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between text-white">
+    <div class="text-2xl font-serif">La Roma</div>
+    <nav class="hidden md:flex space-x-8 uppercase text-sm tracking-widest">
+      <a href="#about" class="hover:underline">О нас</a>
+      <a href="#menu" class="hover:underline">Меню</a>
+      <a href="#gallery" class="hover:underline">Галерея</a>
+      <a href="#team" class="hover:underline">Команда</a>
+      <a href="#reservation" class="hover:underline">Бронь</a>
+    </nav>
+    <div class="md:hidden">
+      <button class="text-white">☰</button>
+    </div>
+  </header>
+
   <!-- HERO -->
   <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('https://source.unsplash.com/1600x900/?italian,restaurant');">
     <div class="bg-black bg-opacity-40 p-8 rounded text-center">
@@ -22,37 +37,37 @@
   </section>
 
   <!-- О РЕСТОРАНЕ -->
-  <section class="py-20 px-6 text-center max-w-3xl mx-auto">
+  <section id="about" class="py-20 px-6 text-center max-w-3xl mx-auto">
     <h2 class="text-4xl mb-6">О ресторане</h2>
     <p class="text-lg leading-relaxed mb-6">
       La Roma — это вкус настоящей Италии в Кишинёве. Винтажный интерьер, авторские рецепты и домашняя паста создают атмосферу южного гостеприимства.
     </p>
-    <a href="#about" class="border border-black px-6 py-3 hover:bg-black hover:text-white transition">Подробнее о нас</a>
+    <a href="#menu" class="border border-black px-6 py-3 hover:bg-black hover:text-white transition">Подробнее о нас</a>
   </section>
 
   <!-- АТМОСФЕРА / ГАЛЕРЕЯ -->
-  <section class="grid md:grid-cols-2 gap-6 px-6 max-w-6xl mx-auto mb-20">
+  <section id="gallery" class="grid md:grid-cols-2 gap-6 px-6 max-w-6xl mx-auto mb-20">
     <img src="https://source.unsplash.com/800x600/?restaurant,interior" class="rounded shadow" alt="Интерьер">
     <img src="https://source.unsplash.com/800x600/?italian,dining" class="rounded shadow" alt="Зал ресторана">
   </section>
 
   <!-- КУХНЯ / МЕНЮ -->
-  <section class="bg-white py-20 px-6 text-center">
+  <section id="menu" class="bg-white py-20 px-6 text-center">
     <h2 class="text-4xl mb-6">Кухня традиций</h2>
     <p class="mb-8 max-w-2xl mx-auto text-lg">
       Мы используем свежие локальные ингредиенты и готовим на дровах, сочетая итальянские традиции с современным стилем.
     </p>
     <img src="https://source.unsplash.com/800x500/?pizza,oven" class="mx-auto rounded mb-6" alt="Печь">
-    <a href="#menu" class="border border-black px-6 py-3 hover:bg-black hover:text-white transition">Карта меню</a>
+    <a href="#reservation" class="border border-black px-6 py-3 hover:bg-black hover:text-white transition">Карта меню</a>
   </section>
 
   <!-- КОМАНДА -->
-  <section class="bg-[#2e2b28] text-white py-20 px-6 text-center">
+  <section id="team" class="bg-[#2e2b28] text-white py-20 px-6 text-center">
     <h2 class="text-4xl mb-6">Познакомьтесь с командой</h2>
     <p class="mb-6 max-w-2xl mx-auto">
       Наша команда — это сердце La Roma. Мы создаём для вас уют, вкус и атмосферу Италии.
     </p>
-    <a href="#team" class="border border-white px-6 py-3 hover:bg-white hover:text-black transition">О команде</a>
+    <a href="#about" class="border border-white px-6 py-3 hover:bg-white hover:text-black transition">О команде</a>
   </section>
 
   <!-- НАГРАДЫ -->
