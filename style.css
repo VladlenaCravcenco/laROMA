@@ -276,6 +276,10 @@ input, textarea {
   position: relative;
   z-index: 1;
 }
+
+.menu-content a{
+  top: 50px;
+}
 .menu-photo {
   width: 350px;
   height: 550px;
